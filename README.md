@@ -10,9 +10,9 @@ _Website design project_
 
 This project is for educational porpuses only. Pull request are welcome, but priority for project authors! Thank you for your cooperation!
 
-Site published at: https://modjuska123.github.io/46-grupe-real-estate 
+Site published at: https://modjuska123.github.io/46-grupe-task-management/ 
 
-Design: [Real-setate](https://dribbble.com/shots/10172325/attachments/2114690?mode=media)
+Design: [Task-mangement](https://dribbble.com/shots/17246001/attachments/12352583?mode=media)
 
 ##  ⛳Project features/goals
 
