@@ -16,10 +16,9 @@ Design: [Task-mangement](https://dribbble.com/shots/17246001/attachments/1235258
 
 ##  ⛳Project features/goals
 
--   Github pages
--   basic [HTML (structure)](https://www.w3schools.com/TAGS/default.asp) and CSS (style)
--   [markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
--   desktop only
+-  Github pages
+-  responsive design
+-  repetetive content generation with JS
 
 ## ⏳ Getting Started
 
