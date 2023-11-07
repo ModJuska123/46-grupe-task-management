@@ -44,5 +44,7 @@ export class Todo {
         this.DOM.classList.add('todo'); //priseda htmlo eilutei klase
         this.DOM.innerHTML = HTML; //suvaro koda i HTMLa.
         this.DOM.style.gridTemplateColumns = `repeat(${this.columns.length}, 1fr)`;
+        this.DOM.style.backgroundColor = 'yellow';
+        
     }
 }
