@@ -4,3 +4,24 @@
     grid-template-columns: repeat(7, 1fr);
     gap: 2rem;
 }
+
+.todo .column {
+    display:flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.todo .title {
+
+}
+.todo .task-list {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+.todo .task-card {
+    padding: 1rem;
+    border-radius: 0.4rem;
+    border: 1px solid #777;
+}
+

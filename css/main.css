@@ -14,11 +14,31 @@ body {font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-se
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    min-height: calc(100vh - 9rem);
     padding: 40px 20px;
 }
 .main-content > div {
     width: 800px;
     font-size: 30px;
+}
+.about{
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 30px;
+}
+
+.about > div {
+width: 800px;
+font-size: 30px;
+}
+
+.main-footer{
+background-color: #333;
+color: #fff;
+padding: 2rem;
+line-height: 1em;
+font-size: 1rem;
 }
 
 @media (max-width: 900px) {

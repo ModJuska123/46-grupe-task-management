@@ -1,25 +1,31 @@
-// LIETUVA - automobilis, sunkvezimis
-// import { liekana, minus, multi, sum } from './sum.js';
-
-// console.log('labas');
-
-// const n1 = 7;
-// const n2 = 5;
+import { Todo } from "./Todo.js"; //importuok Todo is ./Todo.js
 
 
-// const n12 = sum(n1, n2);
-// const n12minus = minus(n1, n2);
-// const n12multi = multi(n1, n2);
-// const n12liekana = liekana(n1, n2);
+const kanban = new Todo('#kanban', ['Backlog', 'Todo', 'In progress', 'Done']); //uz skl selektorius #kanban
 
-// console.log(n12);
-// console.log(n12minus);
-// console.log(n12multi);
-// console.log(n12liekana);
+// kanban.addTask({
+//     columnIndex: 1,
+//     title: "Pirmos uzduoties antraste",
+//     desc: "Pirmos uzduoties pilnas aprasas",
+//     createdOn: "2023-11-08 9:03:15",
+//     deadLine: "2023-12-24 0:0:0", 
+//     tags: ['Design'],
+// });
 
+// kanban.addTask({
+//     columnIndex: 0,
+//     title: "Antros uzduoties antraste",
+//     desc: "Pirmos uzduoties pilnas aprasas",
+//     createdOn: "2023-11-08 9:03:15",
+//     deadLine: "2023-12-24 0:0:0", 
+//     tags: ['Design'],
+// });
 
-import { Todo } from "./Todo.js";
-
-const kanban = new Todo('#kanban', ['Backlog', 'Todo', 'In progress', 'Done']);
-
-// kanban.addTask('');
+// kanban.addTask({
+//     columnIndex: 0,
+//     title: "Trecios uzduoties antraste",
+//     desc: "Pirmos uzduoties pilnas aprasas",
+//     createdOn: "2023-11-08 9:03:15",
+//     deadLine: "2023-12-24 0:0:0", 
+//     tags: ['Design'],
+// });
