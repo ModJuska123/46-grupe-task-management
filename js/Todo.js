@@ -4,6 +4,8 @@ export class Todo {
         this.columns = columns;     
         this.DOM = null;             
         this.columnsDOM = [];
+        this.tasks = [];
+        this.lastUsedTaskId = null;
 
         this.init();             
     }
@@ -45,16 +47,24 @@ export class Todo {
         console.log('this.columnsDOM'); 
     }
     addTask(task) {
-    const HTML = `
-    <li class="task-card">
-        <div>${task.title}</div>
-        <div>${task.desc}</div>
-        <div>${task.createdOn}</div>
-        <div>${task.deadLine}</div>
-        <div>${task.tags}</div>
-    </li>;`
-    console.log(HTML);
+        this.tasks.push(task);
+        
+        let tagsHTML = '';
+        for (const tag of task.tags) {
+            tagsHTML += `<div class="tag" style="color: ${tag.color};">${tag.text}</div>`
+        }
+
+        const HTML = `
+        <li id="task_${++this.lastUsedTaskId}" class="task-card">
+            <div class="task-title">${task.title}</div>
+            <div class="task-desc">${task.desc}</div>
+            <div class="task-createdOn">${task.createdOn}</div>
+            <div class="task-deadLine">${task.deadLine}</div>
+            <div class="task-tags">${tagsHTML}</div>
+        </li>;`
+    console.log(kanban);
 
     this.columnsDOM[task.columnIndex].innerHTML += HTML;
+    
     }
   }

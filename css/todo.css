@@ -3,12 +3,17 @@
     width: 100%;
     grid-template-columns: repeat(7, 1fr);
     gap: 2rem;
+    overflow-y: auto;
+    padding-bottom: 2rem;
 }
 
 .todo .column {
     display:flex;
     flex-direction: column;
     gap: 2rem;
+    width: 20rem;
+    min-height: calc(100vh - 12rem)
+
 }
 .todo .title {
 
@@ -20,8 +25,31 @@
     flex-direction: column;
 }
 .todo .task-card {
+    display: grid;
+    gap: 0.7rem;    
     padding: 1rem;
-    border-radius: 0.4rem;
+    background-color: #fff; 
     border: 1px solid #777;
+    border-radius: 0.4rem;
+    box-shadow:0 0.1rem 0.9rem #0002;
+    overflow-y: auto;
+    max-height: 15rem;
+
+}
+.task-card .task-title{
+font-size: 1.5rem;
+}
+.task-card .task-desc{
+    font-size: 1rem;
+    color: #333;
+}
+.task-card .task-tad{
+    
+}
+.task-card .tag {
+    
 }
 
+.task-card .deadline {
+    
+}
