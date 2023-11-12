@@ -43,11 +43,16 @@ font-size: 1.5rem;
     font-size: 1rem;
     color: #333;
 }
-.task-card .task-tad{
-    
+.task-card .task-tags{
+    display: flex;
+    gap: 0.7rem;
 }
 .task-card .tag {
-    
+    font-size: 0.9rem;
+    padding: 0.5em 1em;
+    border-radius: 1em;
+    line-height: 1em;
+    background-color: #ddd;
 }
 
 .task-card .deadline {

@@ -56,6 +56,9 @@ export class Todo {
 
         const HTML = `
         <li id="task_${++this.lastUsedTaskId}" class="task-card">
+            <div class="task-ations">
+                <button class="fa fa-trash"></button>
+            </div>
             <div class="task-title">${task.title}</div>
             <div class="task-desc">${task.desc}</div>
             <div class="task-createdOn">${task.createdOn}</div>
