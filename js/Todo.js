@@ -31,14 +31,8 @@ export class Todo {
         for (const column of this.columns) {
             HTML += `
                 <div class="column">
-                    <h2>${column}</h2>
-                    <ul>
-                        <li>Task</li>
-                        <li>Task</li>
-                        <li>Task</li>
-                        <li>Task</li>
-                        <li>Task</li>
-                    </ul>
+                    <h2 class="title">${column}</h2>
+                    <ul class="task-list"></ul>
                 </div>`;
         }
 
@@ -50,14 +44,17 @@ export class Todo {
         
         console.log('this.columnsDOM'); 
     }
-    addTask(data) {
+    addTask(task) {
     const HTML = `
     <li class="task-card">
-        <div>{task.title}</div>
-        <div>{task.desc}</div>
-        <div>{task.tag}</div>
-        <div>{task.dedline}</div>
+        <div>${task.title}</div>
+        <div>${task.desc}</div>
+        <div>${task.createdOn}</div>
+        <div>${task.deadLine}</div>
+        <div>${task.tags}</div>
     </li>;`
     console.log(HTML);
+
+    this.columnsDOM[task.columnIndex].innerHTML += HTML;
     }
   }
