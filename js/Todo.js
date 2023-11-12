@@ -47,7 +47,9 @@ export class Todo {
         console.log('this.columnsDOM'); 
     }
     addTask(task) {
-        this.tasks.push(task);
+        this.tasks.push({
+            ...task, isDeleted: false});
+        const taskID = ++this.lastUsedTaskId
         
         let tagsHTML = '';
         for (const tag of task.tags) {
@@ -55,19 +57,28 @@ export class Todo {
         }
 
         const HTML = `
-        <li id="task_${++this.lastUsedTaskId}" class="task-card">
-            <div class="task-ations">
-                <button class="fa fa-trash"></button>
+        <li id="task_${taskID}" class="task-card">
+            <div class="task-actions">
+                <button class="fa fa-trash"></button> 
             </div>
             <div class="task-title">${task.title}</div>
             <div class="task-desc">${task.desc}</div>
-            <div class="task-createdOn">${task.createdOn}</div>
+            <div class="task-created   On">${task.createdOn}</div>
             <div class="task-deadLine">${task.deadLine}</div>
             <div class="task-tags">${tagsHTML}</div>
         </li>;`
     console.log(kanban);
 
-    this.columnsDOM[task.columnIndex].innerHTML += HTML;
+    // this.columnsDOM[task.columnIndex].innerHTML += HTML;
+    this.columnsDOM[task.columnIndex].insertAdjacentHTML('beforeend', HTML);
     
-    }
-  }
+
+    const taskDOM = document.getElementById(`task_${taskID}`);
+    const deleteButtonDOM = taskDOM.querySelector('.fa-trash')
+    
+    deleteButtonDOM.addEventListener('click', () => {
+        this.tasks[taskID - 1].isDeleted = true;
+        taskDOM.remove();
+});
+}
+}
