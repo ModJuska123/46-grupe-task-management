@@ -46,6 +46,8 @@ export class Todo {
         
         console.log('this.columnsDOM'); 
     }
+
+    
     addTask(task) {
         this.tasks.push({
             ...task, isDeleted: false});
